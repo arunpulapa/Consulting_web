@@ -1,0 +1,141 @@
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+  }
+  
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1; /* Lower z-index for overlay */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2; /* Higher z-index for container */
+  }
+  .service-highlights {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 50px 50px;
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.service-card {
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* To position the icon absolutely */
+    overflow: hidden; /* Hide overflow for icon */
+}
+
+.card-icon {
+    position: absolute;
+    top: -30px; /* Position above card */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff; /* Primary color */
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-icon {
+    transform: translateX(-50%) translateY(-10px); /* Lift effect on hover */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 40px; /* Space for icon */
+}
+
+.testimonials-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-carousel {
+    max-width: 600px; /* Limit width for better visibility */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.testimonial-item {
+    padding: 40px 20px; /* More padding for emphasis */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #ffffff; /* White background for testimonials */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial-quote {
+    font-size: 40px; /* Larger quote icon */
+    color: #007bff; /* Primary color */
+    margin-bottom: 20px; /* Space below quote */
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  height: 30px !important;
+  min-width: 0;
+  outline: none;
+  padding: 16px 2px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 40%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}

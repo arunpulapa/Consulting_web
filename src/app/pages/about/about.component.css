@@ -1,0 +1,128 @@
+.icon-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  /* About Section Styles */
+  .about-section {
+    background-color: #f8f9fa;
+  }
+
+  .about-section .card-body {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-section .card-body:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive Layout Adjustments */
+  @media (max-width: 768px) {
+    .icon-container {
+      width: 60px;
+      height: 60px;
+    }
+
+    .icon-container i {
+      font-size: 2rem;
+    }
+
+    .about-section .display-4 {
+      font-size: 2.5rem;
+    }
+
+    .about-section .lead {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .about-section .display-4 {
+      font-size: 2rem;
+    }
+
+    .about-section .lead {
+      font-size: 1rem;
+    }
+  }
+
+  /* Our Culture Section Styles */
+.culture-section {
+    background-color: #ffffff;
+  }
+  
+  .culture-section h2 {
+    font-size: 3rem;
+    color: #28a745;
+  }
+  
+  .culture-section h3 {
+    font-size: 1.75rem;
+    color: #007bff;
+  }
+  
+  .culture-section img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .culture-section .lead {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 768px) {
+    .culture-section h2 {
+      font-size: 2.5rem;
+    }
+  
+    .culture-section h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .culture-section h2 {
+      font-size: 2rem;
+    }
+  
+    .culture-section h3 {
+      font-size: 1.25rem;
+    }
+  
+    .culture-section .lead {
+      font-size: 1rem;
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .fadeInLeft {
+    animation: fadeInLeft 2s ease-in-out;
+  }
+  
+  .fadeInRight {
+    animation: fadeInRight 2s ease-in-out;
+  }
+  

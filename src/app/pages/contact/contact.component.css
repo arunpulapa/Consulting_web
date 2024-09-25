@@ -1,0 +1,80 @@
+.glass-input {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: black;
+    font-size: 1rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .glass-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .glass-input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Submit Button Hover Effect */
+  .glass-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+
+  /* Text Styling */
+  .text-muted {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* General Body Settings */
+  body {
+    overflow: hidden; /* Prevent vertical scroll */
+  }
+
+  /* Responsive Design */
+  @media(max-width: 768px) {
+    .glass-card {
+      padding: 20px;
+    }
+  }
+
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}

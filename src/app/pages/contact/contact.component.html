@@ -1,0 +1,33 @@
+<div class="contact-section d-flex justify-content-center align-items-center" style="min-height: 100vh; background: linear-gradient(145deg, #ece9e6, #ffffff);margin-top: -145px;;">
+    <div class="glass-card shadow-lg p-5" style="width: 100%; max-width: 500px; backdrop-filter: blur(20px); background: rgba(255, 255, 255, 0.1); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);">
+      
+      <!-- Title and Description -->
+      <div class="text-center mb-5">
+        <h2 class="display-5 text-black" style="font-weight: 700;">Contact Us</h2>
+        <p class="text-muted">We’d love to hear from you. Let’s get connected!</p>
+      </div>
+  
+      <!-- Form Start -->
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <!-- Name Input -->
+        <div class="form-group mb-4">
+          <input type="text" id="name" class="form-control glass-input" required [(ngModel)]="contact.name" name="name" placeholder="Your Name" />
+        </div>
+  
+        <!-- Email Input -->
+        <div class="form-group mb-4">
+          <input type="email" id="email" class="form-control glass-input" required [(ngModel)]="contact.email" name="email" placeholder="Your Email" />
+        </div>
+  
+        <!-- Message Input -->
+        <div class="form-group mb-4">
+          <textarea id="message" class="form-control glass-input" rows="4" required [(ngModel)]="contact.message" name="message" placeholder="Your Message"></textarea>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="button-89" [disabled]="!contactForm.valid">Send Message</button>
+      </form>
+      <!-- End of Form -->
+      
+    </div>
+  </div>
