@@ -123,6 +123,28 @@
   }
   
   .fadeInRight {
-    animation: fadeInRight 2s ease-in-out;
+    animation: fadeInRight 1s ease-in-out;
   }
   
+ 
+  
+
+  .swiper-slide {
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition */
+  }
+  
+
+  
+  .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(5px); /* Apply blur to non-active slides */
+  }
+
+  
+  .swiper {
+    border-radius: 20px; /* Ensure the swiper container has rounded corners */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+
+
+

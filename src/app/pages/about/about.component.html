@@ -52,6 +52,11 @@
       <a href="/services" class="btn btn-primary btn-lg mt-4 animated fadeInUp delay-3s">Explore Our Services</a>
     </div>
   </div>
+
+
+
+
+
   
   <!-- Our Culture Section -->
   <div class="culture-section container-fluid py-5 bg-white">
@@ -59,8 +64,35 @@
       <h2 class="display-4 font-weight-bold text-center mb-5 text-success animated fadeIn" style="font-weight: 600;">Our Culture</h2>
       <div class="row">
         <div class="col-lg-6 mb-4 animated fadeInLeft">
-          <img src="https://i.pinimg.com/564x/32/b3/70/32b370a7d775dbda16a53e04d6d62040.jpg" alt="Our Team Culture" class="img-fluid rounded shadow-lg">
+          <!-- <img src="https://i.pinimg.com/564x/32/b3/70/32b370a7d775dbda16a53e04d6d62040.jpg" alt="Our Team Culture" class="img-fluid rounded shadow-lg"> -->
+       
+       
+          <div class="swiper" style="border-radius: 20px;">
+            <div class="swiper-wrapper" >
+              <ng-container *ngFor="let animal of animals">
+                <div class="swiper-slide">
+                  <div *ngIf="animal.media.endsWith('.mp4') || animal.media.endsWith('.webm')">
+                    <video controls>
+                      <source [src]="animal.media" type="video/mp4">
+                    </video>
+                  </div>
+                  <div *ngIf="!animal.media.endsWith('.mp4') && !animal.media.endsWith('.webm')" style="padding: 15px;">
+                    <img [src]="animal.media" alt="{{ animal.title }}" class="img-fluid">
+                  </div>
+                  <!-- <h2 class="" style="color: black;">{{ animal.title }}</h2> -->
+                </div>
+              </ng-container>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          
+          
+       
         </div>
+
+
+
+
         <div class="col-lg-6 d-flex flex-column justify-content-center animated fadeInRight">
           <h3 class="font-weight-bold mb-3 text-primary">Collaborative and Innovative</h3>
           <p class="lead text-muted mb-4">
